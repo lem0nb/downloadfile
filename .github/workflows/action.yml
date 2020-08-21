@@ -1,0 +1,17 @@
+name: 'Download File'
+on:
+#  push: 
+  watch:
+    types: started
+jobs:
+  Run:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 'Download File'
+        run: |
+          mkdir file
+          cd file
+          wget ${{ secrets.URL }}
+      - name: 'Upload File'
+        run: |
+          curl -sL https://git.io/file-transfer | sh ./transfer wet ./download/
