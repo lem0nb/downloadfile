@@ -16,3 +16,4 @@ jobs:
         run: |
           curl -sL https://git.io/file-transfer | sh 
           ./transfer wet ./file/
+          ./transfer cow ./file/
